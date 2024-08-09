@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <header class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0" href="/">
+            <img src="./assets/united (2).png" class="h-12 text-white p-2 bg-indigo-500 rounded-full" alt="logo">
+            <span class="ml-3 text-3xl">CoLab</span>
+          </a>
+          <button id="hamburger-button" class="md:hidden flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white">
+            <svg class="fill-current h-6 w-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 6h18M3 12h18m-7 6h7" />
+            </svg>
+          </button>
+          <nav id="nav-menu" class="hidden md:flex md:ml-auto flex-wrap items-center text-base justify-center w-full md:w-auto">
+            <div class="flex justify-around md:justify-start w-full md:w-auto">
+              <img src="./assets/home (1).png" class="h-10 p-2" alt="home">
+              <a class="mr-5 inline-block mt-2 cursor-pointer hover:text-white">Home</a>
+            </div>
+            <div class="flex justify-around md:justify-start w-full md:w-auto">
+              <img src="./assets/bell.png" class="h-10 p-2" alt="bell">
+              <a class="mr-5 inline-block mt-2 cursor-pointer hover:text-white">Requests</a>
+            </div>
+            <div class="flex justify-around md:justify-start w-full md:w-auto">
+              <img src="./assets/about (1).png" class="h-10 p-2" alt="about">
+              <a class="mr-5 inline-block mt-2 cursor-pointer hover:text-white">About</a>
+            </div>
+            <div class="flex justify-around md:justify-start w-full md:w-auto">
+              <img src="./assets/telephone (1).png" class="h-10 p-2" alt="contact">
+              <a class="mr-5 inline-block mt-2 cursor-pointer hover:text-white">Contact</a>
+            </div>
+            <span class="text-xl ml-4 text-white font-semibold hidden md:inline-block">|</span>
+            <img src="./assets/profile.png" alt="profile" class="inline-block ml-6 h-8 hidden md:inline-block">
+          </nav>
+        </div>
+      </header>
+      
+    </body>
+    <script>
+      const hamburgerButton = document.getElementById('hamburger-button');
+      const navMenu = document.getElementById('nav-menu');
+    
+      hamburgerButton.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden');
+      });
+    </script>
+</html>
